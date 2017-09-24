@@ -31,12 +31,6 @@ dw 0000h
 dw 0000h
 db 508 dup(0)
 
-; 
-; Warning: Highly graphic content.
-; What you are about to see may be disturbing
-; Viewer Discreption is adviced
-; All events here are performed under expert supervision
-; Please don't try these at home
 
 st1: cli
 ; intialize ds, es,ss to start of RAM
@@ -45,6 +39,7 @@ mov       ds,ax
 mov       es,ax
 mov       ss,ax
 mov       sp,0FFFEH
+
 ; 8255_1 with 7447 and has buttdls on port c. porta minutes and portb second; max value is 59:59
 ; greater than equal to thing..
 ; 8255_1 starting address 60h
